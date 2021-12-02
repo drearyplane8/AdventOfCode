@@ -6,13 +6,16 @@ public class Main {
 
     public static Day[] days = new Day[]{
        new Day(new Day1SonarSweep(), new Day1SonarSweepPart2()),
-            new Day(new Day2Part1(), null)
+            new Day(new Day2Part1(), new Day2Part2())
     };
 
     public static void main(String[] args) {
-        days[0].day1.run();
-        days[0].day2.run();
 
-        days[1].day1.run();
+        for(Day day : days){
+            day.day1.run();
+            day.day2.run();
+            System.out.println("-------------------------------");
+        }
+
     }
 }

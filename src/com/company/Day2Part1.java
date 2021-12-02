@@ -22,11 +22,7 @@ public class Day2Part1 extends Challenge {
         for (String command : input) {
             String[] cmd = command.split(" ");
 
-
-
             int amount = Integer.parseInt(cmd[1]);
-
-            System.out.println(cmd[0]);
 
             switch (cmd[0]) {
                 case "forward" -> hpos += amount;
